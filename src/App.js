@@ -29,7 +29,8 @@ function App() {
     );
   }
 
-  const {id,title,company,date,duties} = jobs[value];
+  const {id,title,company,dates,duties} = jobs[value];
+
   return (
     <section className="section">
       <div className="title">
@@ -37,14 +38,17 @@ function App() {
         <div className="underline"></div>
       </div>
       <div className="job-center">
-        {jobs.map((item, index) =>{
-          return(
-            <button onClick={() => setValue(index)}>{item.company}</button>
-          );
-        })}
+        <div className="btn-container">
+          {jobs.map((item, index) =>{
+            return(
+              <button onClick={() => setValue(index)}>{item.company}</button>
+            );
+          })}
+        </div>
+       
         <h3>{title}</h3>
         <h4>{company}</h4>
-        <p>{date}</p>
+        <p>{dates}</p>
         {duties.map((duty,index) =>{
           return(
             <div key={index}>

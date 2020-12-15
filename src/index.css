@@ -6,7 +6,31 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.section{
+  width: 90vw;
+  margin:5rem auto;
+  max-width: 1170px;
 
+}
+.loading{
+  text-align: center;
+}
+.title{
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.underline{
+  width:5rem;
+  height: 4px;
+  background: #1bda3b;
+  margin: 0 auto;
+}
+.job-center{
+  width: 50vw;
+  max-width: 1170px;
+  margin:0 auto;
+
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
