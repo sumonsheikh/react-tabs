@@ -1,12 +1,13 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
+import {FaAngleDoubleRight} from 'react-icons/fa';
 
 const url ='https://course-api.netlify.app/api/react-tabs-project';
 
 function App() {
   const [loading, setLoading] = useState(true);
   const [jobs, setJobs]       = useState([]);
-  const [value, setValue]     = useState(0);
+  const [value, setValue]     = useState(1);
 
   const fetchJobs = async () =>{
     const respons = await fetch(url);
@@ -36,12 +37,18 @@ function App() {
         <div className="underline"></div>
       </div>
       <div className="job-center">
+        {jobs.map((item, index) =>{
+          return(
+            <button onClick={() => setValue(index)}>{item.company}</button>
+          );
+        })}
         <h3>{title}</h3>
         <h4>{company}</h4>
         <p>{date}</p>
         {duties.map((duty,index) =>{
           return(
             <div key={index}>
+              <FaAngleDoubleRight className="duty-icon"></FaAngleDoubleRight>
               <p>{duty}</p>
             </div>
           );
