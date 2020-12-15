@@ -28,16 +28,26 @@ function App() {
     );
   }
 
+  const {id,title,company,date,duties} = jobs[value];
   return (
-    <div className="App">
-      {jobs.map((job) =>{
-        return (
-          <div>
-            <h2>{job.company}</h2>
-          </div>
-        );
-      })}
-    </div>
+    <section className="section">
+      <div className="title">
+        <h2>Experience</h2>
+        <div className="underline"></div>
+      </div>
+      <div className="job-center">
+        <h3>{title}</h3>
+        <h4>{company}</h4>
+        <p>{date}</p>
+        {duties.map((duty,index) =>{
+          return(
+            <div key={index}>
+              <p>{duty}</p>
+            </div>
+          );
+        })}
+      </div>
+    </section>
   );
 }
 
