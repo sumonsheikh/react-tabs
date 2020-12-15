@@ -29,7 +29,28 @@ body {
   width: 50vw;
   max-width: 1170px;
   margin:0 auto;
-
+}
+.btn-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+}
+button{
+  background:transparent;
+  border:transparent;
+  color:#1bda3b;
+  cursor: pointer;
+  line-height: 1;
+  font-size:1.25rem;
+  outline: #1bda3b;
+  padding:0.25rem 0;
+  margin:0 0.5rem;
+}
+button:hover{
+  color:#1bda3b;
+  box-shadow: 0 2px #1bda3b;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
