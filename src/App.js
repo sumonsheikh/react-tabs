@@ -13,10 +13,30 @@ function App() {
     const newJobs = await respons.json();
     setJobs(newJobs);
     setLoading(false);
+  };
+
+  useEffect(() => {
+    fetchJobs();
+
+  }, []);
+
+  if(loading){
+    return(
+      <section className="loading section">
+        <h2>Loading...</h2>
+      </section>
+    );
   }
+
   return (
     <div className="App">
-     
+      {jobs.map((job) =>{
+        return (
+          <div>
+            <h2>{job.company}</h2>
+          </div>
+        );
+      })}
     </div>
   );
 }
