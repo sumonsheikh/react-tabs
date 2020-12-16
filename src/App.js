@@ -45,18 +45,20 @@ function App() {
             );
           })}
         </div>
-       
-        <h3>{title}</h3>
-        <h4>{company}</h4>
-        <p>{dates}</p>
-        {duties.map((duty,index) =>{
-          return(
-            <div key={index}>
-              <FaAngleDoubleRight className="duty-icon"></FaAngleDoubleRight>
-              <p>{duty}</p>
-            </div>
-          );
-        })}
+        <div className="job-info">
+          <h3>{title}</h3>
+          <h4>{company}</h4>
+          <p className="job-date">{dates}</p>
+          {duties.map((duty,index) =>{
+            return(
+              <div key={index} className="job-desc">
+                <FaAngleDoubleRight className="duty-icon"></FaAngleDoubleRight>
+                <p>{duty}</p>
+              </div>
+            );
+          })}
+        </div>
+        
       </div>
     </section>
   );
